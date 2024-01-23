@@ -23,7 +23,7 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 for (i = 0; i < questions.length; i++) {
-  candidateAnswers = input.questions([i]);
+  candidateAnswers = input.questions[i];
 }
 
 
