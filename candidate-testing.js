@@ -44,8 +44,10 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Replace the basic feedback from TODO 1.2c with a template literal that displays each of the candidate’s responses in addition to the corresponding correct answers. // 
 if (candidateAnswers === correctAnswers) {
   console.log(` ${candidateAnswers} are Correct!`);
+  console.log(`The correct answers are: ${correctAnswers}`);
 } else {
   console.log(` ${candidateAnswers} are Incorrect.`);
+  console.log(`The correct answers are: ${correctAnswers}`);
 }
 
 
