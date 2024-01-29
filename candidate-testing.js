@@ -31,31 +31,31 @@ function askQuestion() {
   // TODO 1.2b: Replace your code from TODO 1.2b with a loop that programmatically asks each question in the array and stores the user’s responses. //
 for (let i = 0; i < questions.length; i++) {
   candidateAnswers.push(input.question(questions[i]));
-
 }
-
-
-
-
 }
 
 function gradeQuiz(candidateAnswers) {
 
-  // TODO 1.2c: Replace the basic feedback from TODO 1.2c with a template literal that displays each of the candidate’s responses in addition to the corresponding correct answers. // 
-if (candidateAnswers === correctAnswers) {
-  console.log(` ${candidateAnswers} are Correct!`);
-  console.log(`The correct answers are: ${correctAnswers}`);
+  let score = 0;
+ for (i= 0; i < 5; i++){
+  if (candidateAnswers[i] === correctAnswers[i]) {
+     score = score+1; 
+    console.log(`${i+1}) ${candidateAnswers[i]} is Correct!`);
+    } else {
+    console.log(`${i+1}) ${candidateAnswers[i]} is Incorrect.`);
+    console.log(`The correct answer is: ${correctAnswers[i]}`);
+  }
+}
+let grade = score/5*100; 
+if (grade > 70) {
+  console.log (`You have passed with a(n) ${grade}%`);
 } else {
-  console.log(` ${candidateAnswers} are Incorrect.`);
-  console.log(`The correct answers are: ${correctAnswers}`);
+  console.log (`You have failed with a(n) ${grade}%`);
 }
-
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
   return grade;
+  
 }
+
 
 function runProgram() {
   askForName();
