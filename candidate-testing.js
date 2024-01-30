@@ -46,7 +46,7 @@ function gradeQuiz(candidateAnswers) {
   }
 }
 let grade = score/5*100; 
-if (grade > 70) {
+if (grade >= 80) {
   console.log (`You have passed with a(n) ${grade}%`);
 } else {
   console.log (`You have failed with a(n) ${grade}%`);
